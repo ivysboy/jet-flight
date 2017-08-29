@@ -4,7 +4,7 @@ EXPOSE 8099
 
 ENV APP_NAME=jet-flight
 ENV JAR_PATH=/jet-flight.jar
-ENV APP_ENV=dev
+ENV APP_ENV=DEV
 
 ADD target/jet-flight.jar $JAR_PATH
 RUN sh -c 'touch /jet-flight.jar'
