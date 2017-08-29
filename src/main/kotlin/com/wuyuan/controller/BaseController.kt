@@ -14,6 +14,6 @@ class BaseController {
 
     @GetMapping("/hello")
     fun getBaseHello(): Result {
-        return Result.success()
+        return Result.success("测试提交")
     }
 }
