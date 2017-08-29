@@ -9,42 +9,42 @@
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"
           primary="true">
-        <property name="driverClassName" value="${tb.jdbc.driverClassName}"/>
-        <property name="url" value="${tb.jdbc.url}"/>
-        <property name="username" value="${tb.jdbc.username}"/>
-        <property name="password" value="${tb.jdbc.password}"/>
-        <property name="filters" value="${tb.jdbc.filters}"/>
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="filters" value="${jdbc.filters}"/>
 
         <!-- 配置连接池初始化大小、最大、最小、最大等待时间 -->
-        <property name="initialSize" value="${tb.jdbc.initialSize}"/>
-        <property name="maxActive" value="${tb.jdbc.maxActive}"/>
-        <property name="minIdle" value="${tb.jdbc.minIdle}"/>
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
         <!-- 配置获取连接等待超时的时间 -->
-        <property name="maxWait" value="${tb.jdbc.maxWait}"/>
+        <property name="maxWait" value="${jdbc.maxWait}"/>
 
         <!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
         <!--在mysql5.5以下的版本中没有PSCache功能，建议关闭掉。5.5及以上版本有PSCache，建议开启。-->
-        <!--<property name="poolPreparedStatements" value="${tb.jdbc.poolPreparedStatements}"/>-->
+        <!--<property name="poolPreparedStatements" value="${jdbc.poolPreparedStatements}"/>-->
         <!--<property name="maxPoolPreparedStatementPerConnectionSize"-->
-        <!--value="${tb.jdbc.maxPoolPreparedStatementPerConnectionSize}"/>-->
-        <property name="maxOpenPreparedStatements" value="${tb.jdbc.maxOpenPreparedStatements}"/>
+        <!--value="${jdbc.maxPoolPreparedStatementPerConnectionSize}"/>-->
+        <property name="maxOpenPreparedStatements" value="${jdbc.maxOpenPreparedStatements}"/>
 
-        <property name="validationQuery" value="${tb.jdbc.validationQuery}"/>
-        <property name="testOnBorrow" value="${tb.jdbc.testOnBorrow}"/>
-        <property name="testOnReturn" value="${tb.jdbc.testOnReturn}"/>
-        <property name="testWhileIdle" value="${tb.jdbc.testWhileIdle}"/>
+        <property name="validationQuery" value="${jdbc.validationQuery}"/>
+        <property name="testOnBorrow" value="${jdbc.testOnBorrow}"/>
+        <property name="testOnReturn" value="${jdbc.testOnReturn}"/>
+        <property name="testWhileIdle" value="${jdbc.testWhileIdle}"/>
 
         <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
-        <property name="timeBetweenEvictionRunsMillis" value="${tb.jdbc.timeBetweenEvictionRunsMillis}"/>
+        <property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}"/>
         <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
-        <property name="minEvictableIdleTimeMillis" value="${tb.jdbc.minEvictableIdleTimeMillis}"/>
+        <property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}"/>
 
         <!-- 打开removeAbandoned功能 -->
-        <property name="removeAbandoned" value="${tb.jdbc.removeAbandoned}"/>
+        <property name="removeAbandoned" value="${jdbc.removeAbandoned}"/>
         <!-- 180秒，超过180秒,连接会自动关闭 -->
-        <property name="removeAbandonedTimeout" value="${tb.jdbc.removeAbandonedTimeout}"/>
+        <property name="removeAbandonedTimeout" value="${jdbc.removeAbandonedTimeout}"/>
         <!-- abanded连接时输出错误日志 -->
-        <property name="logAbandoned" value="${tb.jdbc.logAbandoned}"/>
+        <property name="logAbandoned" value="${jdbc.logAbandoned}"/>
         <property name="proxyFilters">
             <list>
                 <ref bean="tb-stat-filter"/>
