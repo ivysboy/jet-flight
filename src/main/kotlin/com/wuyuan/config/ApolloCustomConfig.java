@@ -7,15 +7,16 @@ import com.ctrip.framework.apollo.spring.annotation.ApolloConfigChangeListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by xuwuyuan on 2017/8/29.
  */
-@Component
-public class apolloConfig {
+@Configuration
+public class ApolloCustomConfig {
 
-    private static final Logger log = LoggerFactory.getLogger(apolloConfig.class);
+    private static final Logger log = LoggerFactory.getLogger(ApolloCustomConfig.class);
 
     @ApolloConfig
     private Config config;

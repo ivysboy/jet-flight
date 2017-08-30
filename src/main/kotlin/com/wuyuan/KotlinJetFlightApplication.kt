@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ImportResource
 
 @SpringBootApplication
 @ImportResource
-@EnableApolloConfig("application", "default")
+@EnableApolloConfig("application")
 class KotlinJetFlightApplication
 
 fun main(args: Array<String>) {

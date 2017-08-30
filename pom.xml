@@ -35,6 +35,16 @@
 			<name>happylifeplat public repository</name>
 			<url>http://maven.wang-guanjia.com/nexus/content/groups/public/</url>
 		</repository>
+
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>public-my</id>
+			<name>ivysboy public repository</name>
+			<url>http://nexus.ivysboy.com/nexus/content/groups/public/</url>
+		</repository>
+
 		<repository>
 			<id>spring-releases</id>
 			<url>https://repo.spring.io/libs-release</url>
@@ -133,9 +143,8 @@
 		<dependency>
 			<groupId>com.ctrip.framework.apollo</groupId>
 			<artifactId>apollo-client</artifactId>
-			<version>0.7.0</version>
+			<version>0.9.0-SNAPSHOT</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
